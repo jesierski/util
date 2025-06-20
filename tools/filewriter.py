@@ -19,7 +19,7 @@ def files_content_walk(start_path="."):
                 # add content of file found to file with total contents
                 print(os.path.join(root, file))
                 with open("totalcontents.txt", "a", encoding="utf-8") as f:
-                    contents = Path(os.path.join(root, file)).read_text(errors="ignore")
+                    contents = Path(os.path.join(root, file)).read_text(encoding="utf-8")
                     f.write(contents)
                     f.write("\n")
 
