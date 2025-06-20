@@ -4,7 +4,10 @@ import os
 # Assign directory
 directory = "<here is your desired directory>"
 print("***********************")
-os.remove("totalcontents.txt")
+try:
+    os.remove("totalcontents.txt")
+except:
+    print("The file totalcontents.txt does not exist. It will be created automatically.")
 
 
 # Iterate over files in directory
